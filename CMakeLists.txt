@@ -983,7 +983,7 @@ message(STATUS "Download the models.")
 set(OPENPOSE_URL "${DOWNLOAD_SERVER}models/")
 
 download_model("BODY_25" ${DOWNLOAD_BODY_25_MODEL} pose/body_25/pose_iter_584000.caffemodel
-  78287B57CF85FA89C03F1393D368E5B7) # Body (BODY_25)
+  d41d8cd98f00b204e9800998ecf8427e) # Body (BODY_25)
 download_model("body (COCO)" ${DOWNLOAD_BODY_COCO_MODEL} pose/coco/pose_iter_440000.caffemodel
   5156d31f670511fce9b4e28b403f2939) # Body (COCO)
 download_model("body (MPI)" ${DOWNLOAD_BODY_MPI_MODEL} pose/mpi/pose_iter_160000.caffemodel
