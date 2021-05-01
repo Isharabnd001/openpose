@@ -724,7 +724,7 @@ if (UNIX OR APPLE)
       # Build Process
       set(CAFFE_CPU_ONLY OFF)
       if (${GPU_MODE} MATCHES "CUDA")
-        # execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+        # execute_process(COMMAND git checkout f019d0dfe86f49d1140961f8c7dec22130c83154 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
         execute_process(COMMAND git checkout 1807aad WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
       elseif (${GPU_MODE} MATCHES "CPU_ONLY")
         if (USE_MKL)
@@ -760,7 +760,7 @@ if (UNIX OR APPLE)
             "${CMAKE_BINARY_DIR}/caffe/lib/libmkldnn.so"
             )
         else (USE_MKL)
-          # execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+          # execute_process(COMMAND git checkout f019d0dfe86f49d1140961f8c7dec22130c83154 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
           execute_process(COMMAND git checkout 1807aad WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
         endif (USE_MKL)
         set(CAFFE_CPU_ONLY ON)
@@ -989,9 +989,9 @@ download_model("body (COCO)" ${DOWNLOAD_BODY_COCO_MODEL} pose/coco/pose_iter_440
 download_model("body (MPI)" ${DOWNLOAD_BODY_MPI_MODEL} pose/mpi/pose_iter_160000.caffemodel
   2ca0990c7562bd7ae03f3f54afa96e00) # Body (MPI)
 download_model("face" ${DOWNLOAD_FACE_MODEL} face/pose_iter_116000.caffemodel
-  e747180d728fa4e4418c465828384333) # Face
+  d41d8cd98f00b204e9800998ecf8427e) # Face
 download_model("hand" ${DOWNLOAD_HAND_MODEL} hand/pose_iter_102000.caffemodel
-  a82cfc3fea7c62f159e11bd3674c1531) # Hand
+  d41d8cd98f00b204e9800998ecf8427e) # Hand
 
 message(STATUS "Models Downloaded.")
 
